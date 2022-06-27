@@ -1,0 +1,4 @@
+SELECT FirstName
+FROM Employees
+WHERE DepartmentID IN (3, 10) AND 
+ YEAR(HireDate) BETWEEN 1993 AND 2005

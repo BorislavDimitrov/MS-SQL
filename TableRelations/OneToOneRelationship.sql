@@ -1,0 +1,23 @@
+CREATE TABLE Passports
+(
+	PassportID INT PRIMARY KEY,
+	PassportNumber VARCHAR(100)
+)
+
+INSERT INTO PASSPORTS VALUES
+(101, 'N34FG21B'),
+(102, 'K65LO4R7'),
+(103, 'ZE657QP2')
+
+CREATE TABLE Persons
+(
+	PersonID INT PRIMARY KEY,
+	FirstName NVARCHAR(50),
+	Salary DECIMAL(10,2),
+	PassportID INT REFERENCES Passports(PassportID)
+)
+
+INSERT INTO Persons VALUES
+(1, 'Roberto', 43300.00, 102),
+(2, 'Tom', 56100.00, 103),
+(3, 'Yana', 60200.00, 101)
